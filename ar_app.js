@@ -8,7 +8,7 @@ var mesh2;
 
 var markerRoot1;
 
-var rhinoMesh;
+var rhinoMesh, rhinoMesh2, rhinoMesh3, rhinoMesh4, rhinoMesh5;
 
 init(); // llamado de la funcion principal que se encarga de hacer casi  todo en la app
 animate();
@@ -185,13 +185,13 @@ function init() {
 
     new THREE.MTLLoader()
         .setPath('data/models/')
-        .load('cabeza.mtl', function(materials){
+        .load('1.mtl', function(materials){
 
             materials.preload();
             new THREE.OBJLoader()
                 .setMaterials(materials)
                 .setPath("data/models/")
-                .load("cabeza.obj", function(group){
+                .load("1.obj", function(group){
                     rhinoMesh = group.children[0];
                     rhinoMesh.material.side = THREE.DoubleSide;
                     rhinoMesh.scale.set(0.1, 0.1, 0.1);
@@ -206,6 +206,113 @@ function init() {
                 }, onProgress, onError);
         });
 
+            ////// obj Rhino 2 //////////
+    function onProgress(xhr) {console.log((xhr.loaded / xhr.total * 100) + "% loaded"); }
+    function onError(xhr) {console.log("ha ocurrido un error");}
+
+    new THREE.MTLLoader()
+        .setPath('data/models/')
+        .load('2.mtl', function(materials){
+
+            materials.preload();
+            new THREE.OBJLoader()
+                .setMaterials(materials)
+                .setPath("data/models/")
+                .load("2.obj", function(group){
+                    rhinoMesh2 = group.children[0];
+                    rhinoMesh2.material.side = THREE.DoubleSide;
+                    rhinoMesh2.scale.set(0.1, 0.1, 0.1);
+                    rhinoMesh2.castShadow = true;
+                    rhinoMesh2.receiveShadow = true;
+                    
+                    
+                    markerRoot1.add(rhinoMesh2);
+
+
+
+                }, onProgress, onError);
+        });
+
+                    ////// obj Rhino 3 //////////
+    function onProgress(xhr) {console.log((xhr.loaded / xhr.total * 100) + "% loaded"); }
+    function onError(xhr) {console.log("ha ocurrido un error");}
+
+    new THREE.MTLLoader()
+        .setPath('data/models/')
+        .load('3.mtl', function(materials){
+
+            materials.preload();
+            new THREE.OBJLoader()
+                .setMaterials(materials)
+                .setPath("data/models/")
+                .load("3.obj", function(group){
+                    rhinoMesh3 = group.children[0];
+                    rhinoMesh3.material.side = THREE.DoubleSide;
+                    rhinoMesh3.scale.set(0.1, 0.1, 0.1);
+                    rhinoMesh3.castShadow = true;
+                    rhinoMesh3.receiveShadow = true;
+                    
+                    
+                    markerRoot1.add(rhinoMesh3);
+
+
+
+                }, onProgress, onError);
+        });
+
+                    ////// obj Rhino 2 //////////
+    function onProgress(xhr) {console.log((xhr.loaded / xhr.total * 100) + "% loaded"); }
+    function onError(xhr) {console.log("ha ocurrido un error");}
+
+    new THREE.MTLLoader()
+        .setPath('data/models/')
+        .load('4.mtl', function(materials){
+
+            materials.preload();
+            new THREE.OBJLoader()
+                .setMaterials(materials)
+                .setPath("data/models/")
+                .load("4.obj", function(group){
+                    rhinoMesh4 = group.children[0];
+                    rhinoMesh4.material.side = THREE.DoubleSide;
+                    rhinoMesh4.scale.set(0.1, 0.1, 0.1);
+                    rhinoMesh4.castShadow = true;
+                    rhinoMesh4.receiveShadow = true;
+                    
+                    
+                    markerRoot1.add(rhinoMesh4);
+
+
+
+                }, onProgress, onError);
+        });
+
+                    ////// obj Rhino 2 //////////
+    function onProgress(xhr) {console.log((xhr.loaded / xhr.total * 100) + "% loaded"); }
+    function onError(xhr) {console.log("ha ocurrido un error");}
+
+    new THREE.MTLLoader()
+        .setPath('data/models/')
+        .load('5.mtl', function(materials){
+
+            materials.preload();
+            new THREE.OBJLoader()
+                .setMaterials(materials)
+                .setPath("data/models/")
+                .load("5.obj", function(group){
+                    rhinoMesh5 = group.children[0];
+                    rhinoMesh5.material.side = THREE.DoubleSide;
+                    rhinoMesh5.scale.set(0.1, 0.1, 0.1);
+                    rhinoMesh5.castShadow = true;
+                    rhinoMesh5.receiveShadow = true;
+                    
+                    
+                    markerRoot1.add(rhinoMesh5);
+
+
+
+                }, onProgress, onError);
+        });
 
 }
 
