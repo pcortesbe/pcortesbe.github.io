@@ -118,7 +118,7 @@ function init() {
 
     let markerControl = new THREEx.ArMarkerControls(arToolkitContext, markerRoot1, {
 
-        type: 'pattern', patternUrl: 'data/hiro.patt',
+        type: 'pattern', patternUrl: 'data/pattern-PATRON_DISTANCE.patt',
     });
 
     /////////////////////////////////////////////////
